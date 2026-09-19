@@ -1,7 +1,7 @@
 # CS 457 Project Statement of Work (SOW) & Protocol Specification Template
 
 **Student Name:** Tisha Uythoven  
-**Date:** 2026-09-16  
+**Date:** 2026-09-18  
 **Course:** CS 457 - Computer Networks  
 **Target Server Domain:** `server.uythoven.edu`  
 
@@ -19,10 +19,10 @@
 ### 1.1 Game Overview
 - **Chosen Game:** Terminal Trivia
 - **Player Capacity:** 2 Players (Simulated via 2 CML Client nodes)
-- **Game Summary:** The game will work somewhat like Jeopardy where there will be a few catagories to choose from for a specified number of turns. There will also be a double points question. Players will by having a higher score than the other player. If the round ends in a tie with the same scores, try 1 tie breaker question.
+- **Game Summary:** The game will work somewhat like Jeopardy where there will be a few categories to choose from for a specified number of turns. There will also be a double points question randomly assigned. Players will win by having a higher score than the other player. If the round ends in a tie with the same scores, try 1 tie breaker question.
 
 ### 1.2 Core Game Rules & Win/Draw Conditions
-- **Turn Mechanics:** Each player gets a turn to chose a question and then answer. The next turn will by the other player's. Player 2 cannot answer Player 1's question and vice versa. Once the answer is given and evaluated, the turn will move to the next player.
+- **Turn Mechanics:** Each player gets a turn to chose a question and then answer. The next turn will be the other player's. Player 2 cannot answer Player 1's question and vice versa. Once the answer is given and correctness evaluated, the turn will move to the next player.
 - **Victory Condition:** The player with the most points by the end is the winner. 
 - **Draw/Tie Condition:** If the scores are the same, then 1 tie breaker question will be asked to each player. If it's still a draw, then that will be the declared outcome
 
