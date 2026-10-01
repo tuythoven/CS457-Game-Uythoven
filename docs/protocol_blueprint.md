@@ -2,7 +2,9 @@
 ### 2.1 Transport Layer & Packet Framing Mechanism
 
 Transport Protocol: TCP
+
 Serialization Format: Structured JSON
+
 Framing Rule Requirement: TCP is a continuous byte-stream protocol without built-in message boundaries. Multiple messages sent back-to-back may arrive in a single recv() chunk (coalescing), or a single message may be split across multiple chunks (fragmentation). Your protocol blueprint must explicitly define a deterministic framing rule to delimit message boundaries on the wire.
 
 Framing Options & Examples:
