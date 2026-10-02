@@ -6,3 +6,4 @@ Basic starting prompt:
   1. Only use CONNECT, LOBBY_WAIT, GAME_START, MOVE, STATE_UPDATE, ERROR, DISCONNECT, and GAME_OVER message types with JSON. Don't make new fields or alter the names or change the schema from the protocol_blueprint.md. For MOVE, handle the answer selection or choices according to the schema.
   2. Ensure that when a remote host closes its socket connection cleanly, recv() returns 0 bytes (b"")
   3. All socket receive loops have to check for TCP EOF (recv() returns b"") to prevent 100% CPU infinite loops. Wrap network operations in try-catch block to catch Exceptions (ConnectionResetError, BrokenPipeError, TimeoutError)
+  4. Always use 4-byte big-endian length-prefix framing when reading from or writing to sockets. Never assume recv() returns a complete, standalone message.
