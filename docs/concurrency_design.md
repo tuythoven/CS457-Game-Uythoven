@@ -10,7 +10,7 @@ In multi-threading, each client is assigned a dedicated thread. This approach in
 
 All the server sockets are configured for non-blocking mode. With sock.setblocking(False), operations like recv() or accept() do not block execution and do not freeze up the server if there is no data. 
 
-The server then registers the sockets for OS event interfaces. The single thread blocks on selector.select() and sleeps until a file descriptor is ready to read or write. 
+The server then registers the sockets for OS event interfaces. The single thread blocks on selector.select() and sleeps until a file descriptor is ready to read or write as it listens on sock.listen(). 
 
 When data arrives from a connected client, the event loop becomes active and processes the socket's read buffer, reads the payload, and then executes game logic. This ensures that multiple simultaneous players can connect without thread complexity management. 
 
