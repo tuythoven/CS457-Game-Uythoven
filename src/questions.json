@@ -235,7 +235,7 @@
     },
     {
         "question_id": 40,
-        "prompt": "What year did Pluto become a dward planet?",
+        "prompt": "What year did Pluto become a dwarf planet?",
         "options": ["2006", "2008", "2005", "2010"],
         "answer": 1
     },
